@@ -1,6 +1,8 @@
 from functions import *
 from movie_storage import get_movies, add_movie, delete_movie, update_movie
 
+FILEPATH = "data.json"
+
 
 def main():
     print_title("My Movie Database")
@@ -12,7 +14,7 @@ def main():
             print("\nBye Bye!")
             break
 
-        movies = get_movies()
+        movies = get_movies(FILEPATH)
 
         match user_choice:
             case 1:
@@ -24,7 +26,7 @@ def main():
                 if new_movie_title not in movies:
                     new_movie_rating = get_valid_rating_from_user()
                     new_movie_year = get_valid_year_from_user()
-                    add_movie(new_movie_title, new_movie_rating, new_movie_year)
+                    add_movie(new_movie_title, new_movie_rating, new_movie_year, FILEPATH)
                 else:
                     print(f"\n'{new_movie_title}' already exists.")
                 press_enter_to_continue()
@@ -32,7 +34,7 @@ def main():
             case 3:
                 movie_to_delete = get_title_from_user()
                 if movie_to_delete in movies:
-                    delete_movie(movie_to_delete)
+                    delete_movie(movie_to_delete, FILEPATH)
                 else:
                     print(f"\nMovie '{movie_to_delete}' doesn't exist!")
                 press_enter_to_continue()
@@ -41,7 +43,7 @@ def main():
                 movie_name = get_title_from_user()
                 if movie_name in movies:
                     new_movie_rating = get_valid_rating_from_user()
-                    update_movie(movie_name, new_movie_rating)
+                    update_movie(movie_name, new_movie_rating, FILEPATH)
                 else:
                     print(f"\nMovie '{movie_name}' doesn't exist!")
                 press_enter_to_continue()
