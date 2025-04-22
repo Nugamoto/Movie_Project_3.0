@@ -131,6 +131,7 @@ class StorageCsv(IStorage):
 
 
 if __name__ == "__main__":
+    # test functions
     storage = StorageCsv("test.csv")
     movies = storage.list_movies()
     print(movies)

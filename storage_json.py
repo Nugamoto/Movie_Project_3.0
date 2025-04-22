@@ -131,6 +131,7 @@ class StorageJson(IStorage):
 
 
 if __name__ == "__main__":
+    # test functions
     storage = StorageJson("test.json")
     storage.add_movie("Inception", 2010, 8.8, "https://poster.url/inception.jpg")
     print(storage.list_movies())
