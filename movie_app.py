@@ -174,7 +174,7 @@ class MovieApp:
                 print("\nNo movies found. Website not generated.")
                 return
 
-            with open("_static/index_template.html", "r", encoding="utf-8") as template_file:
+            with open("static/index_template.html", "r", encoding="utf-8") as template_file:
                 template = template_file.read()
 
             title = self._title
@@ -200,13 +200,13 @@ class MovieApp:
             page_content = template.replace("__TEMPLATE_TITLE__", title)
             page_content = page_content.replace("__TEMPLATE_MOVIE_GRID__", movie_grid_html)
 
-            with open("_static/index.html", "w", encoding="utf-8") as output_file:
+            with open("static/index.html", "w", encoding="utf-8") as output_file:
                 output_file.write(page_content)
 
             print("\nWebsite was generated successfully.")
 
         except FileNotFoundError:
-            print("\nError: Template file not found. Make sure '_static/index_template.html' exists.")
+            print("\nError: Template file not found. Make sure 'static/index_template.html' exists.")
         except Exception as e:
             print(f"\nAn unexpected error occurred: {e}")
 
