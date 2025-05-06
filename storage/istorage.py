@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class IStorage(ABC):
     """Interface that defines the required methods for a movie storage system."""
 
