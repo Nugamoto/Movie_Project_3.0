@@ -45,7 +45,8 @@ menu = ("Exit",
         "Search movie",
         "Movies sorted by rating",
         "Movies sorted by year",
-        "Filter movies"
+        "Filter movies",
+        "Generate website"
         )
 
 

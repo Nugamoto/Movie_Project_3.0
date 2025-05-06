@@ -1,42 +1,102 @@
 {
     "The Shawshank Redemption": {
-        "rating": 9.5,
-        "year": 1994
+        "rating": 9.3,
+        "year": 1994,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "The Matrix": {
+        "rating": 8.7,
+        "year": 1999,
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg"
     },
     "Pulp Fiction": {
-        "rating": 8.8,
-        "year": 1994
+        "rating": 8.9,
+        "year": 1994,
+        "poster": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_SX300.jpg"
     },
     "The Room": {
         "rating": 3.6,
-        "year": 2003
+        "year": 2003,
+        "poster": "https://m.media-amazon.com/images/M/MV5BYmNkMThiODYtZTAzMC00ODJkLTg5MmEtMWIyMGFlZDlkYmNlXkEyXkFqcGc@._V1_SX300.jpg"
     },
     "The Godfather": {
         "rating": 9.2,
-        "year": 1972
+        "year": 1972,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "Star Wars: Episode V": {
+        "rating": 8.7,
+        "year": 1980,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_SX300.jpg"
     },
     "The Godfather: Part II": {
         "rating": 9.0,
-        "year": 1974
+        "year": 1974,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDIxMzBlZDktZjMxNy00ZGI4LTgxNDEtYWRlNzRjMjJmOGQ1XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "Raiders of the Lost Ark": {
+        "rating": 8.4,
+        "year": 1981,
+        "poster": "https://m.media-amazon.com/images/M/MV5BOGNhMjg2ZjgtYzk4Ni00MTViLTg1MmUtYzM2MDZiYjZlMmU3XkEyXkFqcGc@._V1_SX300.jpg"
     },
     "The Dark Knight": {
-        "rating": 9.5,
-        "year": 2008
+        "rating": 9.0,
+        "year": 2008,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
     },
     "12 Angry Men": {
-        "rating": 8.9,
-        "year": 1957
+        "rating": 9.0,
+        "year": 1957,
+        "poster": "https://m.media-amazon.com/images/M/MV5BYjE4NzdmOTYtYjc5Yi00YzBiLWEzNDEtNTgxZGQ2MWVkN2NiXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "Indiana Jones and the Temple of Doom": {
+        "rating": 7.5,
+        "year": 1984,
+        "poster": "https://m.media-amazon.com/images/M/MV5BOGUwZjZiNWQtYzAzZi00NGI5LWE4YmUtN2Y4YWMwY2RlZDkyXkEyXkFqcGc@._V1_SX300.jpg"
     },
     "Everything Everywhere All At Once": {
-        "rating": 4,
-        "year": 2022
+        "rating": 7.8,
+        "year": 2022,
+        "poster": "https://m.media-amazon.com/images/M/MV5BOWNmMzAzZmQtNDQ1NC00Nzk5LTkyMmUtNGI2N2NkOWM4MzEyXkEyXkFqcGc@._V1_SX300.jpg"
     },
     "Forrest Gump": {
-        "rating": 6.0,
-        "year": 1994
+        "rating": 8.8,
+        "year": 1994,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_SX300.jpg"
     },
-    "Star Wars: Episode V": {
-        "rating": 5,
-        "year": 1980
+    "Star Wars": {
+        "rating": 8.6,
+        "year": 1977,
+        "poster": "https://m.media-amazon.com/images/M/MV5BOGUwMDk0Y2MtNjBlNi00NmRiLTk2MWYtMGMyMDlhYmI4ZDBjXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "Schindler's List": {
+        "rating": 9.0,
+        "year": 1993,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "Terminator 2: Judgment Day": {
+        "rating": 8.6,
+        "year": 1991,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNGMyMGNkMDUtMjc2Ni00NWFlLTgyODEtZTY2MzBiZTg0OWZiXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    "Final Destination 5": {
+        "rating": 5.9,
+        "year": 2011,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTgyOTExNDc1M15BMl5BanBnXkFtZTcwMDA0MTA4NQ@@._V1_SX300.jpg"
+    },
+    "88": {
+        "rating": 4.9,
+        "year": 2015,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTU5ODM0NjU2MV5BMl5BanBnXkFtZTgwMzY4ODA2NTE@._V1_SX300.jpg"
+    },
+    "21": {
+        "rating": 6.8,
+        "year": 2008,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAyNTU5OTcxOV5BMl5BanBnXkFtZTcwMDEyNjM2MQ@@._V1_SX300.jpg"
+    },
+    "Bitcoin": {
+        "rating": 0.0,
+        "year": 2023,
+        "poster": "https://m.media-amazon.com/images/M/MV5BZDliZWZhNmEtNjFiNS00ZjI1LThmOTItMmJhY2RkM2E4ZTk4XkEyXkFqcGc@._V1_SX300.jpg"
     }
 }

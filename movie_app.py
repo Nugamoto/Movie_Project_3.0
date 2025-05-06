@@ -50,6 +50,7 @@ class MovieApp:
             if title in movies and movies.get(title).get("year") == year:
                 print(f"\nMovie '{title}' already exists!")
             else:
+                title = data.get("Title", "")
                 rating = float(data.get("imdbRating")) if data.get("imdbRating") != "N/A" else 0.0
                 poster = data.get("Poster")
                 self._storage.add_movie(title, year, rating, poster)
@@ -157,14 +158,57 @@ class MovieApp:
         filtered = filter_movies(movies, min_rating, start_year, end_year)
         show_movies(filtered)
 
-    def _generate_website(self):
+    def _command_generate_website(self):
         """
-        Placeholder method for generating a website (not implemented yet).
+        Generate a static HTML website based on the stored movies and a template file.
+
+        Replaces title and movie list placeholders in the template and writes the result
+        to a new index.html file.
 
         Returns:
             None
         """
-        print("\nWebsite generation is not implemented yet.")
+        try:
+            movies = self._storage.list_movies()
+            if not movies:
+                print("\nNo movies found. Website not generated.")
+                return
+
+            with open("_static/index_template.html", "r", encoding="utf-8") as template_file:
+                template = template_file.read()
+
+            title = self._title
+            movie_grid_html = ""
+
+            for name, data in movies.items():
+                poster = data.get("poster", "")
+                year = data.get("year", "")
+                rating = data.get("rating", "")
+
+                movie_html = f"""
+                <li>
+                  <div class="movie">
+                    <img class="movie-poster" src="{poster}" alt="{name} poster"/>
+                    <div class="movie-title">{name}</div>
+                    <div class="movie-year">{year}</div>
+                    <div class="movie-rating">Rating: {rating}</div>
+                  </div>
+                </li>
+                """
+                movie_grid_html += movie_html
+
+            page_content = template.replace("__TEMPLATE_TITLE__", title)
+            page_content = page_content.replace("__TEMPLATE_MOVIE_GRID__", movie_grid_html)
+
+            with open("_static/index.html", "w", encoding="utf-8") as output_file:
+                output_file.write(page_content)
+
+            print("\nWebsite was generated successfully.")
+
+        except FileNotFoundError:
+            print("\nError: Template file not found. Make sure '_static/index_template.html' exists.")
+        except Exception as e:
+            print(f"\nAn unexpected error occurred: {e}")
 
     def run(self):
         """
@@ -211,4 +255,7 @@ class MovieApp:
                     press_enter_to_continue()
                 case 10:
                     self._command_filter_movies()
+                    press_enter_to_continue()
+                case 11:
+                    self._command_generate_website()
                     press_enter_to_continue()
