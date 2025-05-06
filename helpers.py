@@ -246,7 +246,7 @@ def get_title_from_user():
     Returns:
         str: Movie title entered by the user.
     """
-    return input("Enter movie name: ")
+    return input("Enter movie name: ").strip()
 
 
 def get_valid_year_from_user():

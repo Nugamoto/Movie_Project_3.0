@@ -1,3 +1,4 @@
+from fetch_movie import fetch_movie_data
 from helpers import *
 
 
@@ -27,20 +28,31 @@ class MovieApp:
 
     def _command_add_movie(self):
         """
-        Prompt the user for movie details and add a new movie to storage.
+        Prompts the user for a movie title, fetches movie data from the OMDb API,
+        and adds the movie to storage if it does not already exist.
 
-        Returns:
-            None
+        The stored movie includes:
+        - Title (as provided by the user)
+        - Year (from API)
+        - IMDb rating (from API, 0.0 if not available)
+        - Poster URL (from API)
+
+        If the movie already exists in the storage with the same title and year,
+        the movie is not added again.
+
+        :return: None
         """
         movies = self._storage.list_movies()
         title = get_title_from_user()
-        if title not in movies:
-            year = get_valid_year_from_user()
-            rating = get_valid_rating_from_user()
-            poster = input("Enter poster URL: ")
-            self._storage.add_movie(title, year, rating, poster)
-        else:
-            print(f"\nMovie '{title}' already exists!")
+        data = fetch_movie_data(title)
+        if data:
+            year = int(data.get("Year"))
+            if title in movies and movies.get(title).get("year") == year:
+                print(f"\nMovie '{title}' already exists!")
+            else:
+                rating = float(data.get("imdbRating")) if data.get("imdbRating") != "N/A" else 0.0
+                poster = data.get("Poster")
+                self._storage.add_movie(title, year, rating, poster)
 
     def _command_delete_movie(self):
         """
